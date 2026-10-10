@@ -18,7 +18,7 @@
 - Content Gate：LightGCN item embedding 与可学习语义投影融合，加入正例历史语义用户画像；cold item 强制使用语义分支。
 - Content SSL：在相同结构上加入图/语义表征 InfoNCE，用于检查对齐是否有效。
 
-神经模型使用相同 embedding dim=32、lr=0.02、epoch预算和3个 seed；此为固定实验预算，不代表所有基线经过充分超参搜索。各模型只通过 warm 验证 NDCG@20 选择 checkpoint，cold 验证标签不参与方法选择。
+神经模型使用相同 embedding dim=32、lr=0.02、60轮采样更新预算和3个 seed。代码参数名为 `epochs`，每轮每个合格用户抽128组正负对，执行一次全图前向、反向和Adam更新；不是完整遍历全部曝光60遍。此为固定实验预算，不代表所有基线经过充分超参搜索。各模型只通过 warm 验证 NDCG@20 选择 checkpoint，cold 验证标签不参与方法选择。
 
 ## 标签与候选
 

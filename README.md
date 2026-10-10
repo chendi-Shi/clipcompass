@@ -4,11 +4,12 @@
 
 ## 实验入口
 
+- [技术详解](docs/TECHNICAL_WALKTHROUGH.md)：从文字向量到图推荐、BPR/InfoNCE、Qwen LoRA、CPU缓存与服务，逐层解释公式、代码、问题处理和实验边界。
 - [复现说明](docs/RESEARCH_RUNBOOK.md)：数据下载校验、编码、训练、评测和服务命令。
 - [实验协议](docs/RESEARCH_PROTOCOL.md)：时间划分、冷启动隔离、标签、候选与统计口径。
 - [推荐结果](artifacts/research/kuairec/REAL_REPORT.md)：9种方法、3个神经模型随机种子、分组与混合候选指标。
 - [结果分析](docs/RESULTS_ANALYSIS.md)：负结果、冷内容平分偏差与选型边界。
-- [Qwen LoRA 结果](artifacts/research/qwen-lora/LORA_REPORT.md)：base prompt、实际适配器和同标注预算分类基线。
+- [Qwen LoRA 结果](artifacts/research/qwen-lora/LORA_REPORT.md)：base prompt、实际适配器和分类强基线，说明训练集合与输入长度差异。
 - [简历表述](docs/RESUME.md) · [面试讲解](docs/INTERVIEW.md)。
 
 ## 实现
@@ -26,7 +27,7 @@
 
 ## 已执行结果
 
-本机CPU完成完整推荐对照、160步Qwen LoRA、同标注预算分类基线及实际推理。LoRA测试Macro-F1为0.1894（base 0.0367），E5线性分类器为0.5590，因此另提供可加载的E5分类器和新标题推理。推荐融合未证明超过强基线，完整负结果与ID平分偏差见结果分析。
+本机CPU完成完整推荐对照、160步Qwen LoRA、分类强基线及实际推理。LoRA测试Macro-F1为0.1894（base 0.0367），E5线性分类器为0.5590，因此另提供可加载的E5分类器和新标题推理。线性基线使用整次160步运行触达的445条内容，最终选中的第120步adapter实际接触365条；两者输入截断长度也不同，不能视为严格相同训练集的架构对比。推荐融合未证明超过强基线，完整负结果与ID平分偏差见结果分析。
 
 推荐向量服务在3327内容目录下300次查询的p95为1.738ms，排除HTTP/编码器/加载；实际HTTP合法请求200、无效用户400。20项测试全部通过。
 

@@ -4,6 +4,7 @@
 
 ## 实验入口
 
+- [大白话入门](docs/BEGINNER_GUIDE.md)：用一个推荐做饭视频的例子，讲清模型目标、输入输出、训练方法和实际问题；适合第一次接触这些模型。
 - [技术详解](docs/TECHNICAL_WALKTHROUGH.md)：从文字向量到图推荐、BPR/InfoNCE、Qwen LoRA、CPU缓存与服务，逐层解释公式、代码、问题处理和实验边界。
 - [复现说明](docs/RESEARCH_RUNBOOK.md)：数据下载校验、编码、训练、评测和服务命令。
 - [实验协议](docs/RESEARCH_PROTOCOL.md)：时间划分、冷启动隔离、标签、候选与统计口径。

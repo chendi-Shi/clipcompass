@@ -1,0 +1,10 @@
+{
+  "queries": 300,
+  "catalog_items": 3327,
+  "dimension": 32,
+  "p50_ms": 1.152950011601206,
+  "p95_ms": 1.7377300071530046,
+  "vector_memory_bytes": 606464,
+  "measured_scope": "single CPU BLAS thread, exact scoring + seen mask + topk + JSON object construction; excludes HTTP/encoder/model load",
+  "scale": "actual KuaiRec catalog only; not a million-item service benchmark"
+}

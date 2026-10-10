@@ -1,0 +1,307 @@
+{
+  "protocol": {
+    "source": "KuaiRec official small_matrix full file",
+    "raw_rows": 4676570,
+    "retained_rows": 4494578,
+    "users": 1411,
+    "items": 3327,
+    "cold_items": 314,
+    "cutoffs_unix_seconds": [
+      1596915572.0248,
+      1597688304.0911
+    ],
+    "rows_by_time": {
+      "train": 3146204,
+      "validation": 674187,
+      "test": 674187
+    },
+    "training_rows_after_cold_holdout": 2850693,
+    "training_positive_rows": 133798,
+    "missing_caption_items": 158,
+    "caption_parse_audit": {
+      "repaired_physical_line_breaks": 4,
+      "rows": 10728,
+      "rule": "non-ID-starting continuation line joins previous row with space"
+    },
+    "deduplication": "first chronological exposure per user/item; no future-label aggregation",
+    "positive_label": "watch_ratio >= 2, long-watch proxy",
+    "train_negative_label": "watch_ratio < 1",
+    "cold_split": "SHA256 cold-v1:original_video_id mod10==0; all its train/validation labels excluded from optimization/selection",
+    "evaluation": "rank ALL observed held-out exposures for each user within warm/cold item groups; no sampled test negatives; retrospective candidate set",
+    "raw_manifest": {
+      "official_record": 18164998,
+      "official_archive_checksum": "md5:261550d472c48eff4990fb13c0e5bcf7",
+      "download_url": "https://huggingface.co/hiiamkik/miniOneRec-kuairec/resolve/c644945dfa71b5d6f67ae9c7aff0eae40caf06b8/small_matrix.csv",
+      "copy_repo": "hiiamkik/miniOneRec-kuairec",
+      "copy_revision": "c644945dfa71b5d6f67ae9c7aff0eae40caf06b8",
+      "size": 406155844,
+      "sha256": "6b601cd38b2600d8734b4aede309ad73d1e201fdc4bd76d4bc7d2534793d7d15",
+      "official_zip_entry_crc32": "04a13552",
+      "verification": "mirror LFS SHA256 + official ZIP entry size/CRC32; full official ZIP MD5 not evaluated",
+      "license": "CC-BY-SA-4.0",
+      "caption_md5": "31bc38cdccdf75a71df137779035f8cb"
+    },
+    "limitations": [
+      "mostly Chinese; not proof of cross-lingual transfer",
+      "no raw videos or vision features",
+      "captions are release snapshots; original-time versions unknown",
+      "logged exposures retain policy bias",
+      "retrospective exposure-ranking, not an online candidate-availability simulation"
+    ]
+  },
+  "features": {
+    "model": "intfloat/multilingual-e5-small",
+    "resolved_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "pooling": "attention-masked mean + L2",
+    "prefix": "query: ",
+    "max_length": 128,
+    "trainable_encoder": false,
+    "text_source": "caption + manual_cover_text; no category added",
+    "tfidf_fit": "only warm training-observed items",
+    "weight_verification": "official Git blob SHA1 + LFS SHA256",
+    "caption_parse_audit": {
+      "repaired_physical_line_breaks": 4,
+      "rows": 10728,
+      "rule": "non-ID-starting continuation line joins previous row with space"
+    }
+  },
+  "epochs": 60,
+  "seeds": [
+    42,
+    2024,
+    2025
+  ],
+  "summary": {
+    "popularity": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.09937060433100288,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.1602446653380496,
+          "std": 0.0
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.5689824297561017,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.2603543839170288,
+          "std": 0.0
+        }
+      }
+    },
+    "smoothed_longwatch_rate": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.11577930199178854,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.1847947708217697,
+          "std": 0.0
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.5689824297561017,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.2603543839170288,
+          "std": 0.0
+        }
+      }
+    },
+    "tfidf_history": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.05245253176523186,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.0608924958399191,
+          "std": 0.0
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.4026003921486812,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.21463697052280775,
+          "std": 0.0
+        }
+      }
+    },
+    "e5_history": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.04003083819391724,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.04036837318572467,
+          "std": 0.0
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.3446126240345929,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.16351127238335153,
+          "std": 0.0
+        }
+      }
+    },
+    "ease": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.09534953397375862,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.15747578871983725,
+          "std": 0.0
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.5689824297561017,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.2603543839170288,
+          "std": 0.0
+        }
+      }
+    },
+    "bpr_mf": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.11376976469983252,
+          "std": 0.0006736314753778537
+        },
+        "ndcg@20": {
+          "mean": 0.18020905640104437,
+          "std": 0.0009549562932099046
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.5689824297561017,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.2603543839170288,
+          "std": 0.0
+        }
+      }
+    },
+    "lightgcn": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.10701438190497259,
+          "std": 0.00015322929864508984
+        },
+        "ndcg@20": {
+          "mean": 0.18105468156463167,
+          "std": 0.00046670175954349323
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.5689824297561017,
+          "std": 0.0
+        },
+        "ndcg@20": {
+          "mean": 0.2603543839170288,
+          "std": 0.0
+        }
+      }
+    },
+    "content_gate": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.10741176505931231,
+          "std": 0.00017240597109159978
+        },
+        "ndcg@20": {
+          "mean": 0.1813281802873852,
+          "std": 0.00026272185278892416
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.5609481113140223,
+          "std": 0.017186402375683196
+        },
+        "ndcg@20": {
+          "mean": 0.2457140899872162,
+          "std": 0.009438136026568362
+        }
+      }
+    },
+    "content_ssl": {
+      "warm": {
+        "recall@20": {
+          "mean": 0.10723870841996987,
+          "std": 0.00027676619918288304
+        },
+        "ndcg@20": {
+          "mean": 0.1812715684303263,
+          "std": 0.0003210508994912167
+        }
+      },
+      "cold": {
+        "recall@20": {
+          "mean": 0.587878225935603,
+          "std": 0.003268056160149055
+        },
+        "ndcg@20": {
+          "mean": 0.2579982330351372,
+          "std": 0.0036379742900244255
+        }
+      }
+    }
+  },
+  "validation": {
+    "ease_lambda_100.0": 0.1768673683391071,
+    "ease_lambda_500.0": 0.20055560520429558,
+    "ease_lambda_1000.0": 0.20811662463536135,
+    "ease_selected_lambda": 1000.0
+  },
+  "selected_neural_kind_by_validation": "content_ssl",
+  "paired_content_gate_vs_lightgcn": {
+    "warm": {
+      "users": 1396,
+      "mean_ndcg_difference": 0.0002734987227535364,
+      "95_percent_ci": [
+        -0.0007813484177830627,
+        0.0013703534657952495
+      ],
+      "resamples": 2000,
+      "unit": "user; not causal/online significance"
+    },
+    "cold": {
+      "users": 914,
+      "mean_ndcg_difference": -0.014640293929812606,
+      "95_percent_ci": [
+        -0.02836409795861145,
+        -0.0005945553213154395
+      ],
+      "resamples": 2000,
+      "unit": "user; not causal/online significance"
+    }
+  },
+  "versions": {
+    "torch": "2.14.0+cpu",
+    "numpy": "1.26.4"
+  }
+}

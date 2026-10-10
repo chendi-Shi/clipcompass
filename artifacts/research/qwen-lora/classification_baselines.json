@@ -1,0 +1,22 @@
+{
+  "matching": "same unique labeled training content actually seen by LoRA, reconstructed from fixed RNG; no extra labels",
+  "input_scope": "linear baselines use full released caption/cover text (E5 max128 tokens); Qwen prompt uses first96 characters; matched labels, not identical input length",
+  "train_count": 445,
+  "test_count": 160,
+  "results": {
+    "tfidf_logistic": {
+      "accuracy": 0.54375,
+      "macro_f1": 0.5301651533049658,
+      "selected_C_by_validation": 1.0,
+      "validation_macro_f1": 0.4563359168538197,
+      "train_unique_examples": 445
+    },
+    "e5_logistic": {
+      "accuracy": 0.58125,
+      "macro_f1": 0.55902951463298,
+      "selected_C_by_validation": 1.0,
+      "validation_macro_f1": 0.5060197025670171,
+      "train_unique_examples": 445
+    }
+  }
+}

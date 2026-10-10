@@ -1,0 +1,1 @@
+"""ClipCompass research prototype."""

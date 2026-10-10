@@ -1,0 +1,8 @@
+{
+  "processor": "11th Gen Intel(R) Core(TM) i5-1130G7 @ 1.10GHz",
+  "physical_cores": 4,
+  "logical_processors": 8,
+  "ram_bytes": 16885276672,
+  "training_device": "CPU",
+  "torch_threads": 4
+}

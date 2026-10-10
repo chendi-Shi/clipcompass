@@ -1,0 +1,89 @@
+{
+  "internal_user_id": 0,
+  "source_user_id": 14,
+  "model": "content_ssl",
+  "data_source": "KuaiRec",
+  "retrieval": "exact dot product over frozen full catalog; no online updates",
+  "items": [
+    {
+      "video_id": 7594,
+      "caption": "你怎么看？ #足球 #感谢快手我要上热门 ",
+      "category": "民生资讯",
+      "cold": false,
+      "ranking_score": 5.81113338470459,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 6063,
+      "caption": "第一次穿 #jk ",
+      "category": "舞蹈",
+      "cold": false,
+      "ranking_score": 3.2667348384857178,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 152,
+      "caption": "#健身 #感谢快手我要上热门 #",
+      "category": "健身",
+      "cold": false,
+      "ranking_score": 2.7761759757995605,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 7185,
+      "caption": "指甲又长了，必须剪^_^                               不然会有污垢～ ",
+      "category": "颜值",
+      "cold": false,
+      "ranking_score": 2.720612049102783,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 1184,
+      "caption": "最近杨幂有句话很火：你凭什么要别人去了解你的辛苦，你往外看看，这世界上谁不辛苦？又有哪个人活着是容易的呢？ #感谢快手我要上热门 ",
+      "category": "舞蹈",
+      "cold": false,
+      "ranking_score": 2.7066104412078857,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 683,
+      "caption": "评论出你想说的两个字#基德笑 #怪盗基德 ",
+      "category": "颜值",
+      "cold": false,
+      "ranking_score": 2.68733549118042,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 4359,
+      "caption": "🌝",
+      "category": "情感",
+      "cold": false,
+      "ranking_score": 2.661284923553467,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 2065,
+      "caption": "#此作品申请热门 #我要上热门 #神奇动物在这里 ",
+      "category": "科学与法律",
+      "cold": false,
+      "ranking_score": 2.620091676712036,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 690,
+      "caption": "后来这位姑娘取消了婚礼，独自生下孩子。她说：“一个人带孩子虽然辛苦一点，但是总比嫁给这样的人幸福。”",
+      "category": "情感",
+      "cold": false,
+      "ranking_score": 2.3915271759033203,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 8775,
+      "caption": "走 回家了#对镜拍 ",
+      "category": "二次元",
+      "cold": false,
+      "ranking_score": 2.3061561584472656,
+      "score_is_probability": false
+    }
+  ]
+}

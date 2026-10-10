@@ -1,0 +1,2 @@
+# Optional dependency for real-frame attachment and its integration test.
+Pillow>=10,<13

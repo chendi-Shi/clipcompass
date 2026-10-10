@@ -1,0 +1,33 @@
+# Run from ClipCompass root. GPU recipe; NOT executed on the CPU demo machine.
+# Based on the official LlamaFactory qwen3vl_lora_sft example, checked 2026-10-10.
+model_name_or_path: Qwen/Qwen3-VL-4B-Instruct
+image_max_pixels: 262144
+trust_remote_code: false
+stage: sft
+do_train: true
+do_eval: true
+finetuning_type: lora
+lora_rank: 8
+lora_target: all
+dataset_dir: data/sft
+dataset: clip_train
+eval_dataset: clip_eval
+template: qwen3_vl_nothink
+cutoff_len: 2048
+preprocessing_num_workers: 2
+dataloader_num_workers: 0
+output_dir: artifacts/qwen3vl-lora
+logging_steps: 5
+save_steps: 100
+eval_strategy: steps
+eval_steps: 100
+report_to: none
+overwrite_output_dir: false
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 0.0001
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true

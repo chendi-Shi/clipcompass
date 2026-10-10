@@ -1,0 +1,8 @@
+# Isolated research environment; reuse existing PyTorch when available.
+transformers==4.48.3
+scikit-learn==1.6.1
+scipy==1.15.3
+pandas>=2.0,<3
+requests>=2.32,<3
+peft==0.14.0
+matplotlib>=3.8,<4

@@ -1,0 +1,33 @@
+{
+  "internal_user_id": 0,
+  "source_user_id": 14,
+  "model": "content_ssl",
+  "data_source": "KuaiRec",
+  "retrieval": "exact dot product over frozen full catalog; no online updates",
+  "items": [
+    {
+      "video_id": 3247,
+      "caption": "安徽亳州公安发布悬赏通报:16岁少年王凯涉嫌一起重大刑事案件，悬赏10万元征集线索！(来源:澎湃新闻)",
+      "category": "民生资讯",
+      "cold": true,
+      "ranking_score": -7.882019996643066,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 5876,
+      "caption": "爆款来袭 80斤穿到165",
+      "category": "时尚",
+      "cold": true,
+      "ranking_score": -8.007417678833008,
+      "score_is_probability": false
+    },
+    {
+      "video_id": 4718,
+      "caption": "🔒",
+      "category": "自拍",
+      "cold": true,
+      "ranking_score": -8.070899963378906,
+      "score_is_probability": false
+    }
+  ]
+}
